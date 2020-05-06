@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitness.BL", "Fitness.BL\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessApp.CMD", "FitnessApp.CMD\FitnessApp.CMD.csproj", "{92D10683-FD2A-4F14-8EE1-09CDC30B30A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessApp.TEST", "FitnessApp.TEST\FitnessApp.TEST.csproj", "{1F5DAE87-B5EF-4751-94F5-88CDB50FB7F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitness.BLTests", "Fitness.BLTests\Fitness.BLTests.csproj", "{7E196988-7630-4413-9E35-E8E3BC69ABC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{92D10683-FD2A-4F14-8EE1-09CDC30B30A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92D10683-FD2A-4F14-8EE1-09CDC30B30A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92D10683-FD2A-4F14-8EE1-09CDC30B30A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F5DAE87-B5EF-4751-94F5-88CDB50FB7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F5DAE87-B5EF-4751-94F5-88CDB50FB7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F5DAE87-B5EF-4751-94F5-88CDB50FB7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F5DAE87-B5EF-4751-94F5-88CDB50FB7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E196988-7630-4413-9E35-E8E3BC69ABC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E196988-7630-4413-9E35-E8E3BC69ABC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E196988-7630-4413-9E35-E8E3BC69ABC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E196988-7630-4413-9E35-E8E3BC69ABC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
