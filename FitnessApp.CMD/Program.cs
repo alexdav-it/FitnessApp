@@ -28,7 +28,7 @@ namespace FitnessApp.CMD
 
 
             Console.WriteLine(userController.CurrentUser);
-            Console.ReadLine();
+            
 
 
         }
@@ -66,7 +66,6 @@ namespace FitnessApp.CMD
                 {
                     Console.WriteLine($"Неверный формат {name}а.");
                 }
-
             }
         }
     }

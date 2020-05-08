@@ -20,16 +20,17 @@ namespace Fitness.BL.Controller.Tests
 
         [TestMethod()]
         public void SetNewUserDataTest()
-        {
+        {   //Arrange
             string userName = Guid.NewGuid().ToString();
-            var birthDate = DateTime.Now.AddYears(-18);
-            var weight = 90;
-            var height = 200;
-            var gender = "man";
-            var controller = new UserController(userName);
+            DateTime birthDate = DateTime.Now.AddYears(-18);
+            int weight = 90;
+            int height = 200;
+            string gender = "man";
+            //Act
+            UserController controller = new UserController(userName);
             controller.SetNewUserData(gender, birthDate, weight, height);
-            var controler2 = new UserController(userName);
-
+            UserController controler2 = new UserController(userName);
+            //Assert
             Assert.AreEqual(userName, controler2.CurrentUser.Name);
             Assert.AreEqual(birthDate, controler2.CurrentUser.BirthDate);
             Assert.AreEqual(weight, controler2.CurrentUser.Weight);
