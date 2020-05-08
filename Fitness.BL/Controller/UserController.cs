@@ -60,7 +60,7 @@ namespace Fitness.BL.Controller
         /// </summary>
         public void Save()
         {
-            Save("users.dat", Users);
+            Save(USERS_FILE_NAME, Users);
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)

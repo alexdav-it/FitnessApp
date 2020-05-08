@@ -14,7 +14,7 @@ namespace Fitness.BL.Controller
         {
             BinaryFormatter formatter = new BinaryFormatter();
 
-            using (FileStream fs = new FileStream("fileName", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, item);
             }
@@ -24,7 +24,7 @@ namespace Fitness.BL.Controller
         {
             BinaryFormatter formatter = new BinaryFormatter();
 
-            using (FileStream fs = new FileStream("fileName", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 if (fs.Length > 0 && formatter.Deserialize(fs) is T items )
                 {

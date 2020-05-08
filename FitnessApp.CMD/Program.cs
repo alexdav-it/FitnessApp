@@ -1,4 +1,5 @@
 ﻿using Fitness.BL.Controller;
+using Fitness.BL.Model;
 using System;
 
 namespace FitnessApp.CMD
@@ -14,6 +15,9 @@ namespace FitnessApp.CMD
 
 
             UserController userController = new UserController(name);
+            var eatingController = new FoodEatingController(userController.CurrentUser);
+
+
             if (userController.IsNewUser)
             {
                 Console.Write("Введите пол: ");
@@ -28,9 +32,44 @@ namespace FitnessApp.CMD
 
 
             Console.WriteLine(userController.CurrentUser);
-            
+
+            Console.WriteLine("Что вы хотите сделать?");
+            Console.WriteLine("Е - ввести прием пищи");
+            Console.WriteLine();
+            ConsoleKeyInfo key = Console.ReadKey();
+            if (key.Key == ConsoleKey.E)
+            {
+                var foods = EnterEating();
+                eatingController.Add(foods.Food, foods.Weight);
+
+                foreach (var e in eatingController.Eating.Foods)
+                {
+                    Console.WriteLine($"\t{e.Key} - {e.Value}");
+                }
+            }
+
+            Console.ReadLine();
+        }
+
+        private static (Food Food, double Weight) EnterEating()
+        {
+            Console.Write("ВВедите имя продукта: ");
+            string foodName = Console.ReadLine();
 
 
+            double weight = ParseDouble("вес");
+
+
+            double callories = ParseDouble("каллории");
+
+
+            double proteins = ParseDouble("белки");
+
+            double fats = ParseDouble("жиры");
+
+            double carbohydrates = ParseDouble("углеводы");
+
+            return (new Food(foodName, callories, fats, proteins, carbohydrates), weight);
         }
 
         private static DateTime ParseDateTime()
@@ -58,13 +97,13 @@ namespace FitnessApp.CMD
             while (true)
             {
                 Console.Write($"Введите {name}: ");
-                if (double.TryParse(Console.ReadLine(),out double value))
+                if (double.TryParse(Console.ReadLine(), out double value))
                 {
                     return value;
                 }
                 else
                 {
-                    Console.WriteLine($"Неверный формат {name}а.");
+                    Console.WriteLine($"Неверный формат поля {name}.");
                 }
             }
         }
